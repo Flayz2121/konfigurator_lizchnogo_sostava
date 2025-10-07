@@ -1,0 +1,146 @@
+
+/* Левая часть хедера */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.header-emblem {
+  width: 88px;
+  height: 84px;
+  object-fit: contain;
+  transition: transform 0.4s ease, filter 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.header-emblem:hover {
+  transform: scale(1.08) rotate(2deg);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.header-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  white-space: pre-line;
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+}
+
+/* Правая часть хедера */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.logout-button {
+  font-weight: 600;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.logout-button:hover {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.25));
+  transform: translateY(-2px);
+}
+
+.logout-button:active {
+  transform: scale(0.92);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+}
+
+.logout-icon {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.logout-button:hover .logout-icon {
+  transform: rotate(10deg);
+}
+
+.faculty-logo {
+  width: 88px;
+  height: 84px;
+  object-fit: contain;
+  transition: transform 0.4s ease, filter 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.faculty-logo:hover {
+  transform: scale(1.08) rotate(-2deg);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1rem;
+    margin: 0 1rem 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .header-left, .header-right {
+    width: 100%;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .header-emblem, .faculty-logo {
+    width: 72px;
+    height: 68px;
+  }
+
+  .logout-button {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.75rem;
+    margin: 0 0.5rem 1rem;
+  }
+
+  .header-title {
+    font-size: 1.25rem;
+  }
+
+  .header-emblem, .faculty-logo {
+    width: 60px;
+    height: 56px;
+  }
+}

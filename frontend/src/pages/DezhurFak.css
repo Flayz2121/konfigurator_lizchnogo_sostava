@@ -1,0 +1,260 @@
+/* Общий контейнер */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 1rem 1rem;
+  background: linear-gradient(180deg, #0a0a23 0%, #1c2526 100%);
+}
+
+
+
+/* Контент */
+.content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 80rem;
+  margin-top: 2rem;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+
+
+/* Селектор курсов */
+.course-selector {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-selector button {
+  padding: 0.75rem 1.5rem;
+  background: rgba(55, 65, 81, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  color: #e5e7eb;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.course-selector button:hover {
+  background: rgba(55, 65, 81, 0.9);
+  border-color: #60a5fa;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+}
+
+.course-selector button.active {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+/* Таблица статистики */
+.stats-table {
+  background: rgba(31, 41, 55, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stats-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 0.75rem;
+  text-align: left;
+  color: #e5e7eb;
+}
+
+.stats-table th {
+  background: rgba(55, 65, 81, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Форма добавления */
+.add-form {
+  background: rgba(31, 41, 55, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.add-form input,
+.add-form select {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(55, 65, 81, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  color: #e5e7eb;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.add-form input:focus,
+.add-form select:focus {
+  outline: none;
+  border-color: #60a5fa;
+  background: rgba(55, 65, 81, 0.9);
+}
+
+.add-form button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.add-form button:hover {
+  background: linear-gradient(90deg, #1d4ed8, #6d28d9);
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+}
+
+/* Таблица данных */
+.table-container {
+  margin-top: 1rem;
+  width: 100%;
+  background: rgba(31, 41, 55, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.table-container th,
+.table-container td {
+  padding: 1rem;
+  text-align: left;
+  color: #e5e7eb;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-container th {
+  background: rgba(55, 65, 81, 0.7);
+  font-weight: 600;
+}
+
+.table-container tr:hover {
+  background: rgba(55, 65, 81, 0.3);
+}
+
+/* Кнопки действий */
+.table-container button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.table-container button.edit {
+  background: #2563eb;
+}
+
+.table-container button.edit:hover {
+  background: #1d4ed8;
+}
+
+.table-container button.save {
+  background: #16a34a;
+}
+
+.table-container button.save:hover {
+  background: #15803d;
+}
+
+.table-container button.cancel {
+  background: #6b7280;
+}
+
+.table-container button.cancel:hover {
+  background: #4b5563;
+}
+
+.table-container button.delete {
+  background: #ef4444;
+}
+
+.table-container button.delete:hover {
+  background: #dc2626;
+}
+
+/* Нет данных */
+.no-data {
+  text-align: center;
+  color: #6b7280;
+  padding: 1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .container {
+    padding: 5rem 0.5rem 1rem;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .table-container th,
+  .table-container td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .add-form input,
+  .add-form select {
+    padding: 0.5rem;
+  }
+
+  .course-selector button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Анимации */
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}

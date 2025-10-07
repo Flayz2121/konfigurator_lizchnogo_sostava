@@ -1,0 +1,19 @@
+/* DezhurAkad.css */
+
+/* Общие стили таблицы */
+.table-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.stats-table-grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(120px, 1fr));
+  gap: 1px;
+  padding: 0;
+}
+

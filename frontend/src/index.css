@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles.css */
+.grid-cell {
+  display: flex;
+  align-items: center; /* Вертикальное центрирование */
+  justify-content: left; /* Выравнивание текста слева */
+  padding: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.table-grid {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* Для таблицы с курсом */
+.table-grid-general {
+  grid-template-columns: 40px 100px 120px 200px 200px 180px 180px;
+}
+
+/* Для таблицы без курса */
+.table-grid:not(.table-grid-general) {
+  grid-template-columns: 40px 120px 200px 200px 180px 180px;
+}
+
+.row-container {
+  display: flex;
+  align-items: center;
+  min-width: 1000px; /* Минимальная ширина для согласованности */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.row-content {
+  flex: 1;
+}
+
+.row-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.overflow-x-auto {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Стили для инпутов */
+.input-field {
+  width: 100%;
+  box-sizing: border-box;
+}
+
