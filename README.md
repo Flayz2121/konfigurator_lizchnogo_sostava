@@ -34,13 +34,19 @@ cd frontend
 npm start
 
 📁 Структура проекта
-plaintext
+
 konfigurator_lizchnogo_sostava/
+
 ├── .gitignore
+
 ├── README.md
+
 ├── .idea/
+
 ├── backend/
+
 └── frontend/
+
 
 🧰 Используемые технологии
 Backend: Python (Django, django rest framework), PyJWT, PostgreSQL
